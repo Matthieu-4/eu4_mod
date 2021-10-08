@@ -1,0 +1,31 @@
+country_event = {
+	id = t_i.s
+	title = "t_i.s.t"
+	desc = "t_i.s.d"
+	picture = NAVAL_MILITARY_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = MNG
+		is_year = 1444
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "t_i.s.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "trade_isolation"
+				duration = -1
+			}
+		}
+		add_country_modifier = {
+			name = "trade_isolation"
+			duration = -1
+		}
+	}
+}

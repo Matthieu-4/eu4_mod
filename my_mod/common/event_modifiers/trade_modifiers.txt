@@ -1,0 +1,29 @@
+trade_isolation = {
+	province_trade_power_modifier = 2.50
+	global_own_trade_power = 5.00
+	global_foreign_trade_power = -2.50
+	global_ship_trade_power = -2.50
+	ship_power_propagation = -2.50
+	embargo_efficiency = 5.00
+	trade_range_modifier = -0.75
+	trade_steering = -0.50
+
+	# Other effects
+	merchants = 3
+	diplomats = -1
+	global_institution_spread = -0.25
+	innovativeness_gain = -0.10
+	stability_cost_to_declare_war = 1
+}
+
+start_trade_isolation = {
+	trade_efficiency = -0.10
+	yearly_corruption = 0.10
+	all_power_cost = 0.05
+}
+
+end_trade_isolation = {
+	trade_efficiency = -0.10
+	yearly_corruption = 0.10
+	global_unrest = 2
+}

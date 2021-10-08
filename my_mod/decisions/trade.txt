@@ -1,0 +1,52 @@
+country_decisions = {
+
+	open_trade = {
+		major = yes
+		potential = {
+			has_country_modifier = trade_isolation
+		}
+		allow = {
+			NOT = { has_country_modifier = start_trade_isolation }
+		}
+		effect = {
+			remove_country_modifier = trade_isolation
+			add_country_modifier = {
+				name = "end_trade_isolation"
+				duration = 9125 # 25 years
+			}
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	close_trade = {
+		major = yes
+		potential = {
+			NOT = { has_country_modifier = trade_isolation }
+			is_colonial_nation = no
+			is_at_war = no
+		}
+		allow = {
+			NOT = { has_country_modifier = end_trade_isolation }
+			OR = {
+				government_rank = 3
+				is_emperor_of_china = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "trade_isolation"
+				duration = -1
+			}
+			add_country_modifier = {
+				name = "start_trade_isolation"
+				duration = 9125 # 25 years
+			}
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
